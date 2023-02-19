@@ -1,0 +1,40 @@
+1.update ith bit
+ith bit ko clear karke value ko left shift karke or lelo
+
+2.count no of set bits
+int setBits(int N) {
+        // Write Your Code here
+        int c=0;
+        while(N>0)
+        {
+            if((N & 1)==1)
+            {
+                c++;
+            }
+            N=N>>1;
+        }
+        return c;
+    }
+    
+3.decimal to binary
+void toBinary(int N)
+{
+    // your code here
+    string ans="";
+    while(N>0)
+    {
+        int p=N&1;
+        ans+=to_string(p);
+        N=N>>1;
+    }
+    reverse(ans.begin(),ans.end());
+    cout<<ans;
+        
+}
+
+int main()
+{
+    int N=33;
+    toBinary(N);
+    return 0;
+}
